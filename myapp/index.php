@@ -16,7 +16,7 @@
         <h3 class="mt-4">สมัครสมาชิก</h3>
     <hr>
     <form action="signup_db.php" method="post">
-        <?php if(($_SESSION['error'])){?>
+        <?php if(isset($_SESSION['error'])){?>
             <div class="alert alert-danger" role='alert'>
                 <?php
                     echo $_SESSION['error'];
@@ -24,7 +24,7 @@
                 ?>
             </div>
         <?php }?>
-        <?php if(($_SESSION['success'])){?>
+        <?php if(isset($_SESSION['success'])){?>
             <div class="alert alert-sucess" role='alert'>
                 <?php
                     echo $_SESSION['sucess'];
@@ -32,7 +32,7 @@
                 ?>
             </div>
         <?php }?>
-        <?php if(($_SESSION['warning'])){?>
+        <?php if(isset($_SESSION['warning'])){?>
             <div class="alert alert-warning" role='alert'>
                 <?php
                     echo $_SESSION['warning'];
